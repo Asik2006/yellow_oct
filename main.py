@@ -3,6 +3,7 @@ import random
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
+from UI import Ui_MainWindow
 
 SIZE = [749, 556]
 
@@ -18,7 +19,7 @@ class Example(QMainWindow):
     def draw(self):
         self.figure = 'circle'
         self.size = random.randint(10, 100)
-        self.color = (254, 254, 0)
+        self.color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
         self.flag = True
         self.update()
 
